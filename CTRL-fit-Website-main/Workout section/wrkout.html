@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Workout Section</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body background="https://cdn.pixabay.com/photo/2017/04/27/18/59/sport-2266395_1280.jpg" >
+        <div class="container">
+            <h1>Workout Section</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                            <img src="imgs/chest workout.jpg " width="100%">
+                            <img src="imgs/play.png" class="play-btn" onclick="playVideo('videos/chest.mp4')">
+                        </div>
+                </div>
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="imgs/shoulder.jpg" width="100%">
+                            <img src="imgs/play.png" class="play-btn" onclick="playVideo('videos/shoulder.mp4')">
+                        </div>
+                        <p>This is shoulder workout exercise</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="imgs/legs.jpg" width="100%">
+                                <img src="imgs/play.png" class="play-btn" onclick="playVideo('videos/leg.mp4')">
+                            </div>
+                            <p> This is leg workout exercise</p>
+                            </div>
+                            <div class="small-img-row">
+                                <div class="small-img">
+                                    <img src="imgs/back.jpg" width="100%">
+                                    <img src="imgs/play.png" class="play-btn" onclick="playVideo('videos/back.mp4')">
+                                </div>
+                                <p>This is back workout exercise</p>
+                                </div>
+                                
+                            </div>
+                        </div> 
+                    </div>
+
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="videos/chest.mp4 " type="video/mp4">
+            </video>
+            <img src="imgs/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+
+        <script>
+            var videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myVideo");
+            
+            function stopVideo(){
+                videoPlayer.style.display = "none";
+            }
+
+            function playVideo(file){
+                myVideo.src = file;
+                videoPlayer.style.display = "block";
+            }
+
+        </script>
+
+
+    </body>
+</html>
